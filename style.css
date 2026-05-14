@@ -1,0 +1,464 @@
+/* ================= GLOBAL RESET ================= */
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+scroll-behavior:smooth;
+transition: all 0.3s ease;
+}
+
+body{
+font-family:'Poppins',sans-serif;
+background:#050816;
+color:white;
+overflow-x:hidden;
+}
+
+/* ================= GRID BACKGROUND ================= */
+body::before{
+content:'';
+position:fixed;
+inset:0;
+
+background-image:
+linear-gradient(rgba(255,255,255,0.03) 1px,transparent 1px),
+linear-gradient(90deg,rgba(255,255,255,0.03) 1px,transparent 1px);
+
+background-size:50px 50px;
+
+pointer-events:none;
+z-index:-1;
+}
+
+/* ================= HEADER ================= */
+header{
+width:100%;
+padding:20px 8%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+position:fixed;
+top:0;
+left:0;
+z-index:1000;
+background:rgba(0,0,0,0.5);
+backdrop-filter:blur(10px);
+border-bottom:1px solid rgba(255,255,255,0.08);
+flex-wrap:wrap;
+}
+
+/* ================= LOGO ================= */
+.logo{
+display:flex;
+align-items:center;
+gap:12px;
+}
+
+/* S BOX */
+.logo-box{
+width:55px;
+height:55px;
+border-radius:15px;
+background:linear-gradient(135deg,#00f7ff,#00ff88);
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:28px;
+font-weight:bold;
+color:#050816;
+box-shadow:0 0 25px rgba(0,255,200,0.5);
+}
+
+/* BRAND NAME */
+.logo h2{
+font-size:28px;
+font-weight:800;
+display:flex;
+gap:6px;
+align-items:center;
+white-space:nowrap;
+}
+
+/* COLORS */
+.logo h2 .white{
+color:white;
+}
+
+.logo h2 .blue{
+color:#00e5ff;
+}
+
+.logo h2 .orange{
+color:#ffb400;
+}
+
+/* ================= NAV ================= */
+nav{
+display:flex;
+gap:30px;
+}
+
+nav a{
+text-decoration:none;
+color:white;
+font-weight:500;
+position:relative;
+}
+
+nav a:hover{
+color:#00e5ff;
+}
+
+nav a::after{
+content:'';
+position:absolute;
+left:0;
+bottom:-6px;
+width:0%;
+height:2px;
+background:#00e5ff;
+transition:0.4s;
+}
+
+nav a:hover::after{
+width:100%;
+}
+
+/* ACTIVE NAV */
+nav a.active{
+color:#00e5ff;
+font-weight:700;
+text-shadow:0 0 10px rgba(0,229,255,0.5);
+}
+
+nav a.active::after{
+width:100%;
+box-shadow:0 0 12px #00e5ff;
+}
+
+/* ================= HERO ================= */
+.hero{
+min-height:100vh;
+display:flex;
+align-items:center;
+justify-content:space-between;
+padding:150px 8% 80px;
+position:relative;
+overflow:hidden;
+
+background:
+radial-gradient(circle at top left,#00e5ff22,transparent 30%),
+radial-gradient(circle at bottom right,#00ff8822,transparent 30%),
+linear-gradient(135deg,#020617,#050816,#0a0f1f);
+}
+
+.hero-text{
+max-width:650px;
+z-index:2;
+}
+
+.hero-text h1{
+font-size:75px;
+line-height:1.1;
+font-weight:800;
+margin-bottom:20px;
+}
+
+.hero-text h1 span{
+color:#ffb400;
+}
+
+.hero-text p{
+font-size:18px;
+line-height:1.8;
+color:#d7d7d7;
+margin-bottom:35px;
+}
+
+.hero-buttons{
+display:flex;
+gap:20px;
+flex-wrap:wrap;
+}
+
+/* BUTTONS */
+.btn{
+padding:15px 32px;
+border-radius:50px;
+text-decoration:none;
+font-weight:600;
+display:inline-block;
+}
+
+.btn-primary{
+background:linear-gradient(135deg,#00e5ff,#00ff88);
+color:black;
+font-weight:700;
+box-shadow:0 0 15px #00e5ff,0 0 35px rgba(0,229,255,0.3);
+}
+
+.btn-primary:hover{
+transform:translateY(-5px);
+}
+
+.btn-secondary{
+border:2px solid #00e5ff;
+color:white;
+}
+
+.btn-secondary:hover{
+background:#00e5ff;
+color:black;
+}
+
+/* ================= SERVICES ================= */
+.services{
+padding:100px 8%;
+background:#0a0f1f;
+}
+
+.section-title{
+text-align:center;
+font-size:50px;
+margin-bottom:60px;
+font-weight:800;
+}
+
+.section-title span{
+color:#00e5ff;
+}
+
+.service-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:30px;
+}
+
+.service-card{
+background:rgba(255,255,255,0.05);
+border:1px solid rgba(255,255,255,0.08);
+padding:40px 30px;
+border-radius:25px;
+transition:0.4s ease;
+}
+
+.service-card:hover{
+transform:translateY(-12px);
+border-color:#00e5ff;
+}
+
+/* ================= ABOUT ================= */
+.about{
+padding:100px 8%;
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:60px;
+}
+
+.about img{
+width:100%;
+border-radius:30px;
+}
+
+/* ================= CONTACT ================= */
+.contact-box form{
+display:flex;
+flex-direction:column;
+gap:15px;
+}
+
+.contact-box input,
+.contact-box textarea{
+padding:14px;
+border-radius:10px;
+border:1px solid rgba(255,255,255,0.2);
+background:rgba(255,255,255,0.05);
+color:white;
+outline:none;
+}
+
+.contact-box textarea{
+min-height:120px;
+resize:none;
+}
+
+.contact-box button{
+padding:14px;
+border:none;
+border-radius:10px;
+background:linear-gradient(135deg,#00e5ff,#00ff88);
+font-weight:700;
+cursor:pointer;
+}
+
+.contact-box button:hover{
+transform:translateY(-3px);
+}
+
+/* ================= WHATSAPP BUTTON ================= */
+.whatsapp-side{
+position:fixed;
+right:0;
+top:50%;
+transform:translateY(-50%);
+display:flex;
+align-items:center;
+gap:10px;
+background:#25D366;
+color:white;
+padding:14px 18px;
+border-radius:50px 0 0 50px;
+font-size:22px;
+font-weight:600;
+text-decoration:none;
+box-shadow:0 0 20px rgba(37,211,102,0.5);
+z-index:9999;
+}
+
+.whatsapp-side:hover{
+transform:translateY(-50%) translateX(-5px);
+box-shadow:0 0 30px rgba(37,211,102,0.8);
+}
+
+/* ================= FOOTER ================= */
+footer{
+padding:30px;
+text-align:center;
+background:black;
+}
+
+footer p{
+color:#bdbdbd;
+}
+
+/* ================= CARDS ================= */
+.programming{
+padding:100px 8%;
+background:#050816;
+}
+
+.card-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit, minmax(250px, 1fr));
+gap:25px;
+margin-top:40px;
+}
+
+.card{
+background:rgba(255,255,255,0.05);
+border:1px solid rgba(255,255,255,0.08);
+padding:30px;
+border-radius:20px;
+backdrop-filter:blur(12px);
+transition:0.4s ease;
+box-shadow:0 0 25px rgba(0,255,255,0.05);
+cursor:pointer;
+}
+
+.card:hover{
+transform:translateY(-10px);
+border-color:#00e5ff;
+box-shadow:0 0 35px rgba(0,229,255,0.2);
+}
+
+.card i{
+font-size:40px;
+color:#00e5ff;
+margin-bottom:15px;
+}
+
+.card h3{
+font-size:20px;
+margin-bottom:10px;
+}
+
+.card p{
+font-size:14px;
+line-height:1.7;
+color:#cfcfcf;
+}
+
+/* ================= BRAND NAME ================= */
+
+.brand-name{
+font-size:28px;
+font-weight:800;
+letter-spacing:1px;
+display:flex;
+align-items:center;
+flex-wrap:wrap;
+}
+
+/* COLORS */
+.samy{
+color:#ffffff;
+}
+
+.tech{
+color:#00e5ff;
+text-shadow:0 0 10px rgba(0,229,255,0.7);
+}
+
+.code{
+color:#ffffff;
+margin-left:4px;
+}
+
+.design{
+color:#ffb400;
+text-shadow:0 0 10px rgba(255,180,0,0.5);
+}
+
+/* ================= TYPING EFFECT ================= */
+
+.typing{
+overflow:hidden;
+white-space:nowrap;
+border-right:3px solid #00e5ff;
+width:0;
+animation:
+typing 4s steps(40,end) forwards,
+blink .8s infinite;
+}
+
+/* TYPING */
+@keyframes typing{
+from{
+width:0;
+}
+to{
+width:370px;
+}
+}
+
+/* CURSOR BLINK */
+@keyframes blink{
+50%{
+border-color:transparent;
+}
+}
+
+/* ================= MOBILE ================= */
+
+@media(max-width:768px){
+
+.brand-name{
+font-size:20px;
+}
+
+.typing{
+animation:
+typingMobile 4s steps(40,end) forwards,
+blink .8s infinite;
+}
+
+@keyframes typingMobile{
+from{
+width:0;
+}
+to{
+width:260px;
+}
+}
+
+}
