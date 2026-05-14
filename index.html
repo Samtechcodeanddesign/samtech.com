@@ -1,123 +1,419 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SamyTech Code & Design</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background-color: #f8f9fa;
-      color: #333;
-    }
-    header {
-      background-color: #1e1e2f;
-      color: #fff;
-      padding: 20px;
-      text-align: center;
-    }
-    nav a {
-      color: #fff;
-      margin: 0 15px;
-      text-decoration: none;
-    }
-    .hero {
-      padding: 60px 20px;
-      text-align: center;
-      background-color: #4a4e69;
-      color: white;
-    }
-    .hero h1 {
-      font-size: 2.5rem;
-    }
-    .hero p {
-      font-size: 1.2rem;
-    }
-    .services, .about, .portfolio, .contact {
-      padding: 40px 20px;
-      max-width: 1000px;
-      margin: auto;
-    }
-    .services h2, .about h2, .portfolio h2, .contact h2 {
-      text-align: center;
-      margin-bottom: 20px;
-    }
-    .service-item {
-      margin-bottom: 20px;
-    }
-    footer {
-      text-align: center;
-      padding: 20px;
-      background-color: #1e1e2f;
-      color: white;
-    }
-    .button {
-      background-color: #ff6f61;
-      color: white;
-      padding: 10px 20px;
-      border: none;
-      cursor: pointer;
-      margin-top: 20px;
-      text-decoration: none;
-      display: inline-block;
-    }
-  </style>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+<title>SamyTech Code & Design</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+
+<!-- ACTIVE NAV STYLE -->
+<style>
+nav a.active{
+color:#00e5ff;
+}
+
+nav a.active::after{
+width:100%;
+}
+</style>
+
 </head>
+
 <body>
-  <header>
-    <h1>SamyTech Code & Design</h1>
-    <nav>
-      <a href="#services">Services</a>
-      <a href="#portfolio">Portfolio</a>
-      <a href="#about">About</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </header>
 
-  <section class="hero">
-    <h1>Building Innovative Apps & Visual Experiences That Inspire</h1>
-    <p>Custom software. Smart apps. Creative design. All in one place.</p>
-    <a href="#contact" class="button">Get a Free Quote</a>
-    <a href="#portfolio" class="button">View Portfolio</a>
-  </section>
+<!-- HEADER -->
+<header>
+  <div class="logo">
+    
+    <div class="logo-box">SA</div>
 
-  <section id="services" class="services">
-    <h2>Our Services</h2>
-    <div class="service-item">
-      <h3>🖥️ Software Development</h3>
-      <p>We build custom software tailored to your business needs.</p>
-    </div>
-    <div class="service-item">
-      <h3>📱 Mobile App Development</h3>
-      <p>From concept to code, we create powerful mobile experiences.</p>
-    </div>
-    <div class="service-item">
-      <h3>🎨 Graphics & UI/UX Design</h3>
-      <p>Stunning visuals, brand identity, and user-friendly interfaces.</p>
-    </div>
-  </section>
+    <!-- BRAND NAME WITH HACKER EFFECT -->
+    <h2 class="brand-name typing">
+      <span class="samy">Samy</span><span class="tech">Tech</span>
+      <span class="code"> Code</span>
+      <span class="design"> & Design</span>
+    </h2>
 
-  <section id="portfolio" class="portfolio">
-    <h2>Portfolio</h2>
-    <p>Check out some of our latest projects coming soon!</p>
-  </section>
+  </div>
 
-  <section id="about" class="about">
-    <h2>About Us</h2>
-    <p>SamyTech Code & Design is a creative tech firm dedicated to transforming ideas into functional and beautiful digital products. Our team combines coding expertise with bold design thinking.</p>
-  </section>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#services">Services</a>
+    <a href="#programming">Programming</a>
+    <a href="#mobile-apps">Mobile Apps</a>
+    <a href="#graphic-design">Graphic Design</a>
+    <a href="#web-design">Web Design</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
 
-  <section id="contact" class="contact">
-    <h2>Contact Us</h2>
-    <p>Email: contact@samytech.com</p>
-    <p>Phone: +234-000-000-0000</p>
-    <p>WhatsApp: +234-000-000-0000</p>
-  </section>
+<!-- HERO -->
+<section class="hero" id="home">
+<div class="hero-text">
+<h1>
+Creative <span>Solutions</span><br>
+Design. Develop. Empower.
+</h1>
 
-  <footer>
-    <p>&copy; 2025 SamyTech Code & Design. All rights reserved.</p>
-  </footer>
+<p>
+Professional solutions that help your brand stand out and your goals become reality.
+We create modern websites, mobile apps, branding, graphics and powerful digital experiences.
+</p>
+
+<div class="hero-buttons">
+<a href="#contact" class="btn btn-primary">Get Started</a>
+<a href="#services" class="btn btn-secondary">Our Services</a>
+</div>
+</div>
+
+<div class="hero-image">
+<img src="logo.png" alt="SamyTech">
+</div>
+</section>
+
+<!-- SERVICES -->
+<section class="services" id="services">
+<h2 class="section-title">Our <span>Services</span></h2>
+
+<div class="service-grid">
+
+<div class="service-card">
+<i class="fa-solid fa-code"></i>
+<h3>Programming</h3>
+<p>Custom websites and software systems.</p>
+</div>
+
+<div class="service-card">
+<i class="fa-solid fa-mobile-screen"></i>
+<h3>Mobile Apps</h3>
+<p>Android and iOS applications.</p>
+</div>
+
+<div class="service-card">
+<i class="fa-solid fa-palette"></i>
+<h3>Graphic Design</h3>
+<p>Logos, flyers and branding.</p>
+</div>
+
+<div class="service-card">
+<i class="fa-solid fa-laptop-code"></i>
+<h3>Web Design</h3>
+<p>Modern responsive websites.</p>
+</div>
+
+</div>
+</section>
+
+<!-- PROGRAMMING SERVICES -->
+<section class="programming" id="programming">
+
+<h2 class="section-title">Programming <span>Services</span></h2>
+
+<div class="card-grid">
+
+<div class="card">
+<i class="fa-solid fa-laptop-code"></i>
+<h3>Software Development</h3>
+<p>I design and develop web, mobile, and desktop applications tailored to business needs.</p>
+</div>
+
+<div class="card">
+<i class="fa-solid fa-bug"></i>
+<h3>Debugging & Problem Solving</h3>
+<p>I fix code issues, optimize performance, and ensure smooth system operation.</p>
+</div>
+
+<div class="card">
+<i class="fa-solid fa-diagram-project"></i>
+<h3>System Design</h3>
+<p>I design scalable and secure software architectures that are easy to maintain.</p>
+</div>
+
+<div class="card">
+<i class="fa-solid fa-database"></i>
+<h3>Database Management</h3>
+<p>I build and manage secure databases for fast and reliable data handling.</p>
+</div>
+
+<div class="card">
+<i class="fa-solid fa-code-branch"></i>
+<h3>Version Control (Git)</h3>
+<p>I manage code using Git for collaboration and structured development.</p>
+</div>
+
+<div class="card">
+<i class="fa-solid fa-vial"></i>
+<h3>Testing & QA</h3>
+<p>I test applications thoroughly to ensure they are stable and error-free.</p>
+</div>
+
+<div class="card">
+<i class="fa-solid fa-cloud-arrow-up"></i>
+<h3>Deployment & Maintenance</h3>
+<p>I deploy websites and applications and provide ongoing support and updates.</p>
+</div>
+
+<div class="card">
+<i class="fa-solid fa-mobile-screen"></i>
+<h3>Frontend Development</h3>
+<p>I build responsive and interactive user interfaces for great user experience.</p>
+</div>
+
+<div class="card">
+<i class="fa-solid fa-gears"></i>
+<h3>Automation & Scripting</h3>
+<p>I create scripts that automate tasks and improve productivity.</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- MOBILE APP DEVELOPMENT -->
+<section class="mobile-apps" id="mobile-apps">
+
+<h2 class="section-title">Mobile <span>App Development</span></h2>
+
+<div class="card-grid">
+
+<div class="card">
+<i class="fa-solid fa-mobile-screen"></i>
+<h3>Custom App Development</h3>
+<p>I build fully customized mobile apps tailored to your business needs, from concept to launch.</p>
+</div>
+
+<div class="card">
+<i class="fa-brands fa-android"></i>
+<h3>Android Applications</h3>
+<p>Development of fast, secure, and scalable apps optimized for the Android ecosystem.</p>
+</div>
+
+<div class="card">
+<i class="fa-brands fa-apple"></i>
+<h3>iOS Applications</h3>
+<p>Creation of smooth and responsive iOS apps with a premium user experience.</p>
+</div>
+
+<div class="card">
+<i class="fa-solid fa-rotate"></i>
+<h3>Cross-Platform Development</h3>
+<p>I build apps that run on both Android and iOS using modern frameworks.</p>
+</div>
+
+<div class="card">
+<i class="fa-solid fa-paintbrush"></i>
+<h3>UI/UX Design</h3>
+<p>Clean, intuitive, and engaging mobile interfaces that enhance user experience.</p>
+</div>
+
+<div class="card">
+<i class="fa-solid fa-vial"></i>
+<h3>App Testing & Optimization</h3>
+<p>Thorough testing to ensure apps are bug-free and fast across devices.</p>
+</div>
+
+<div class="card">
+<i class="fa-solid fa-cloud-arrow-up"></i>
+<h3>App Deployment</h3>
+<p>Publishing apps on Google Play Store and Apple App Store with proper setup.</p>
+</div>
+
+<div class="card">
+<i class="fa-solid fa-screwdriver-wrench"></i>
+<h3>Maintenance & Updates</h3>
+<p>Ongoing support, feature upgrades, and performance improvements after launch.</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- GRAPHIC DESIGN -->
+<section class="graphic-design" id="graphic-design">
+
+<h2 class="section-title">Graphic <span>Design</span></h2>
+
+<div class="card-grid">
+
+<div class="card">
+<i class="fa-solid fa-pen-nib"></i>
+<h3>Logo Design</h3>
+<p>I create unique and professional logos that represent your brand identity.</p>
+</div>
+
+<div class="card">
+<i class="fa-solid fa-image"></i>
+<h3>Flyer Design</h3>
+<p>Eye-catching flyers for promotions, events, and marketing campaigns.</p>
+</div>
+
+<div class="card">
+<i class="fa-solid fa-layer-group"></i>
+<h3>Brand Identity</h3>
+<p>Complete branding solutions including colors, fonts, and visual style.</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- WEB DESIGN -->
+<section class="web-design" id="web-design">
+
+<h2 class="section-title">Web <span>Design</span></h2>
+
+<div class="card-grid">
+
+<div class="card">
+<i class="fa-solid fa-laptop-code"></i>
+<h3>Modern Website Design</h3>
+<p>I create clean, modern and professional websites that represent your brand perfectly.</p>
+</div>
+
+<div class="card">
+<i class="fa-solid fa-mobile-screen"></i>
+<h3>Responsive Design</h3>
+<p>Websites that work perfectly on all devices including mobile, tablet, and desktop.</p>
+</div>
+
+<div class="card">
+<i class="fa-solid fa-bolt"></i>
+<h3>Fast Performance</h3>
+<p>Optimized websites for speed, SEO, and smooth user experience.</p>
+</div>
+
+<div class="card">
+<i class="fa-solid fa-code"></i>
+<h3>Frontend Development</h3>
+<p>Building interactive websites using HTML, CSS, and JavaScript.</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+<img src="tech-bg.jpg" alt="About SamyTech">
+
+<div class="about-text">
+<h2>About <span>SamyTech</span></h2>
+
+<p>About Us
+
+We are a dedicated team of programmers and digital solution providers committed to building high-quality software for businesses and individuals. Our focus is on delivering reliable, scalable, and user-friendly applications that solve real-world problems.
+
+From web and mobile app development to system design and deployment, we handle every stage of the development process with precision and attention to detail. We combine technical expertise with a deep understanding of user needs to create solutions that are both functional and impactful.
+
+Our mission is to help businesses grow through technology by providing innovative, efficient, and cost-effective digital solutions.</p>
+
+<a href="#contact" class="btn btn-primary">Work With Us</a>
+</div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+
+<div class="contact-box">
+
+<h2>Contact Us</h2>
+
+<form id="contactForm">
+
+<input type="text" id="name" placeholder="Your Name" required>
+
+<input type="email" id="email" placeholder="Your Email" required>
+
+<textarea id="message" placeholder="Your Message" required></textarea>
+
+<button type="submit">Send Message</button>
+
+</form>
+
+</div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+<p>© 2026 SamyTech Code & Design. All Rights Reserved.</p>
+</footer>
+
+<!-- WHATSAPP FLOAT BUTTON -->
+<a href="https://wa.me/2349067515815?text=Hello%20SamyTech,%20I%20want%20to%20make%20an%20order"
+class="whatsapp-side"
+target="_blank">
+
+<i class="fa-brands fa-whatsapp"></i>
+<span>Order</span>
+</a>
+
+<!-- ACTIVE NAV SCRIPT -->
+<script>
+const sections = document.querySelectorAll("section");
+const navLinks = document.querySelectorAll("nav a");
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      navLinks.forEach(link => link.classList.remove("active"));
+
+      const id = entry.target.getAttribute("id");
+      const activeLink = document.querySelector(`nav a[href="#${id}"]`);
+
+      if (activeLink) activeLink.classList.add("active");
+    }
+  });
+}, {
+  threshold: 0.6
+});
+
+sections.forEach(section => observer.observe(section));
+</script>
+
+<!-- CONTACT SCRIPT -->
+<script>
+document.getElementById("contactForm").addEventListener("submit", function(e){
+
+e.preventDefault();
+
+const name = document.getElementById("name").value;
+const email = document.getElementById("email").value;
+const message = document.getElementById("message").value;
+
+const whatsappMessage =
+`Hello SamyTech Code & Design
+
+Name: ${name}
+Email: ${email}
+
+Message:
+${message}`;
+
+const whatsappURL =
+`https://wa.me/2349067515815?text=${encodeURIComponent(whatsappMessage)}`;
+
+window.open(whatsappURL, "_blank");
+
+document.getElementById("contactForm").reset();
+
+});
+</script>
+<script>
+
+/* REMOVE CURSOR AFTER TYPING */
+setTimeout(() => {
+
+document.querySelector(".typing").style.borderRight = "none";
+
+}, 4500);
+
+</script>
 </body>
 </html>
